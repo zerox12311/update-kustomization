@@ -2,6 +2,7 @@
 An CI image for updating image tags using kustomize.
 
 Environment variables:
+- `GIT_TOKEN`: Personal Access Token from Gitea or Github, etc.
 - `SSH_KEY`: Base64-encoded private ssh key of `MANIFEST_USER`
 - `MANIFEST_HOST`: Manifest git server host
 - `MANIFEST_USER`: Manifest git user name
@@ -62,8 +63,8 @@ steps:
   pull: if-not-exists
   image: minghsu0107/update-kustomization
   environment:
-    SSH_KEY:
-      from_secret: ssh_key
+    GIT_TOKEN:
+      from_secret: ci_git_token
     MANIFEST_HOST: git.mycompany.com
     MANIFEST_USER: myuser
     MANIFEST_USER_EMAIL: myuser@mycompany.com

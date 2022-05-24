@@ -1,8 +1,9 @@
-FROM line/kubectl-kustomize:1.20.2-3.9.1
+FROM line/kubectl-kustomize:1.24.0-4.5.5
 
 COPY entrypoint.sh /bin/
 RUN chmod +x /bin/entrypoint.sh
 
+ENV GIT_TOKEN=
 ENV SSH_KEY=
 ENV IMAGES=
 ENV IMAGE_TAG=
