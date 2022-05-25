@@ -1,12 +1,13 @@
 # Update Kustomization
 An CI image for updating image tags using kustomize.
 
-Environment variables:
-- `GIT_TOKEN`: Personal Access Token from Gitea or Github, etc.
+Drone plugin settings:
+- `GIT_TOKEN`: Personal Access Token from Gitea or GitHub, etc.
 - `SSH_KEY`: Base64-encoded private ssh key of `MANIFEST_USER`
 - `MANIFEST_HOST`: Manifest git server host
 - `MANIFEST_USER`: Manifest git user name
 - `MANIFEST_USER_EMAIL`: Manifest git user email
+- `MANIFEST_NAMESPACE`: Manifest git repository namespace or organization name
 - `MANIFEST_REPO`: Manifest git repository
 - `MANIFEST_BRANCH`: Manifest repository branch
 - `IMAGES`: Updated images (comma-separated list)
@@ -62,12 +63,13 @@ steps:
 - name: kustomization
   pull: if-not-exists
   image: andyhan/update-kustomization
-  environment:
+  settings:
     GIT_TOKEN:
       from_secret: git_token_ci_robot
     MANIFEST_HOST: git.mycompany.com
     MANIFEST_USER: myuser
     MANIFEST_USER_EMAIL: myuser@mycompany.com
+    MANIFEST_NAMESPACE: myuser
     MANIFEST_REPO: myapp-manifests
     MANIFEST_BRANCH: main
     IMAGES: harbor.mycompany.com/myuser/mysvc1,harbor.mycompany.com/myuser/mysvc2
