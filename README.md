@@ -61,10 +61,10 @@ name: update-kustomization
 steps:
 - name: kustomization
   pull: if-not-exists
-  image: minghsu0107/update-kustomization
+  image: andyhan/update-kustomization
   environment:
     GIT_TOKEN:
-      from_secret: ci_git_token
+      from_secret: git_token_ci_robot
     MANIFEST_HOST: git.mycompany.com
     MANIFEST_USER: myuser
     MANIFEST_USER_EMAIL: myuser@mycompany.com
