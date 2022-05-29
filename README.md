@@ -1,7 +1,7 @@
 # Update Kustomization
 An CI image for updating image tags using kustomize.
 
-Drone plugin settings:
+Drone plugin settings (when used without Drone please add PLUGIN_ as the environment variable prefix):
 - `GIT_TOKEN`: Personal Access Token from Gitea or GitHub, etc.
 - `SSH_KEY`: Base64-encoded private ssh key of `MANIFEST_USER`
 - `MANIFEST_HOST`: Manifest git server host
