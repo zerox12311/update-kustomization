@@ -1,4 +1,4 @@
-FROM line/kubectl-kustomize:1.24.0-4.5.5
+FROM line/kubectl-kustomize:1.24.3-4.5.7
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
     && apk update \
