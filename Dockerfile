@@ -1,8 +1,9 @@
-FROM line/kubectl-kustomize:1.24.3-4.5.7
+ARG KUSTOMIZE_IMAGE=line/kubectl-kustomize:1.24.3-4.5.7
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
-    && apk update \
-    && apk upgrade \
+FROM ${KUSTOMIZE_IMAGE}
+
+# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
+RUN apk update && apk upgrade \
     && apk add --no-cache git openssh \
     && rm -rf /var/cache/apk/*
 
