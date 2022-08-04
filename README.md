@@ -1,3 +1,5 @@
+[![Publish Docker image](https://github.com/andyhan/update-kustomization/actions/workflows/docker-image.yml/badge.svg)](https://github.com/andyhan/update-kustomization/actions/workflows/docker-image.yml)
+
 # Update Kustomization
 An CI image for updating image tags using kustomize.
 
