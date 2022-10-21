@@ -9,7 +9,7 @@ on:
 env:
   REGISTRY: docker.io
   IMAGE_NAME: ${{ github.repository }}
-  KUSTOMIZE_IMAGE: line/kubectl-kustomize:1.24.3-4.5.7
+  KUSTOMIZE_IMAGE: line/kubectl-kustomize:1.25.3-4.5.7
   
 jobs:
 
