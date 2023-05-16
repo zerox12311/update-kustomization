@@ -1,4 +1,4 @@
-ARG KUSTOMIZE_IMAGE=line/kubectl-kustomize:1.24.3-4.5.7
+ARG KUSTOMIZE_IMAGE=line/kubectl-kustomize:1.26.3-5.0.1
 
 FROM ${KUSTOMIZE_IMAGE}
 
