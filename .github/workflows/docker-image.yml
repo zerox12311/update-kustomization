@@ -7,7 +7,7 @@ on:
     - release/*    
 
 env:
-  KUSTOMIZE_IMAGE: line/kubectl-kustomize:1.27.2-5.0.3
+  KUSTOMIZE_IMAGE: docker.io/line/kubectl-kustomize:1.27.3-5.1.0
   
 jobs:
 
