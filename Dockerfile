@@ -1,4 +1,4 @@
-ARG KUSTOMIZE_IMAGE=docker.io/line/kubectl-kustomize:1.27.3-5.1.0
+ARG KUSTOMIZE_IMAGE=docker.io/line/kubectl-kustomize:1.27.4-5.1.0
 
 FROM ${KUSTOMIZE_IMAGE}
 
